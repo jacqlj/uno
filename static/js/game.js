@@ -84,7 +84,6 @@ $('#restart-btn').on('click', () => {
 $('#menu-btn').on('click', () => {
     $('.comp-player-label').css('opacity', 0);
     endDiv.find('*').hide('fade', {}, 500);
-    console.log(menuDiv.width());
     endDiv.animate({
         'top': menuDiv.css('top'),
         'left': `${($('.game').width() - menuDiv.width())/2}px`,

@@ -230,7 +230,14 @@ const renderEndScreen = (winner) => {
         );
         let winText = winner === 'player' ? 'win! 🎉' : 'won.';
         $('.end .title').html(`${getPlayerName(winner)} ${winText}`);
-        $('.end').show('fade', {}, 500);
+        endDiv.css({
+            'top': '30%',
+            'left': 'max(10%, 50% - 20rem)',
+            'width': 'min(80%, 40rem)',
+            'height': '40%',
+        });
+        endDiv.find('*').show();
+        endDiv.show('fade', {}, 500);
     }, 500);
 };
 
